@@ -1,0 +1,43 @@
+﻿<div class="col-md-6 col-sm-12 ">
+    <div *ngIf='selectedVillage.vil_code <1000' >
+        <label>District:</label> 
+        <select [(ngModel)]="selectedDistrict.dist_code" (change)="onSelect($event.target.value)">
+          <option value="0">--Select--</option>
+          <option *ngFor="let district of districts" value= {{district.dist_code}}>{{district.dist_name}}</option>
+        </select>
+
+        <label>SubDistrict:</label>
+        
+          <select [(ngModel)]="selectedSubDistrict.sub_dist_code" (change)="onSelect_sd($event.target.value)">
+            <option value="0">--Select--</option>
+          <option *ngFor="let subdist of subdists" value= {{subdist.sub_dist_code}}>{{subdist.sub_dist_name}}</option>
+        </select>
+
+        <label>Village:</label>
+       
+        <select [(ngModel)]="selectedVillage.vil_code" (change)="onSelect_vil($event.target.value)">
+          <option value="0">--Select--</option>
+          <option *ngFor="let village of vils" value= {{village.vil_code}}>{{village.vil_name}}</option>
+        </select>
+      </div>
+        <div *ngIf='selectedVillage.vil_code >1000' class="col-md-6 col-sm-12 col-md-offset-3" >
+            <h1>{{selectedVillage.vil_name}}</h1>
+            
+          <h3>Mandal: {{selectedSubDistrict.sub_dist_name}}</h3>
+          <h3>District: {{selectedDistrict.dist_name}}</h3>
+          <p>If you want to see more details about this village please register or login.</p>
+          <p>In order to do registration, first you need to select your Birth place (Janma Sthali) and rgister</p>
+          
+        </div>
+ <!--  -->
+
+    <!-- <ul>
+         <li *ngFor="let district of districts">
+             <p> {{district.dist_name}} </p>
+         </li> 
+    </ul> -->
+
+</div>
+<div class="col-md-6 col-sm-12"  *ngIf='selectedVillage.vil_code >1000'> 
+<router-outlet></router-outlet>
+</div>
