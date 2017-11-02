@@ -9,15 +9,15 @@ import { AppConfig } from './app.config';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/index';
-
-import { BasicComponent } from './basic/basic.component';
+import {AlertComponent} from './_directives/index';
+// import { BasicComponent } from './basic/basic.component';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
-import { DinoListComponent } from './dino-list/dino-list.component';
-import { RandomDinoComponent } from './random-dino/random-dino.component';
+// import { DinoListComponent } from './dino-list/dino-list.component';
+// import { RandomDinoComponent } from './random-dino/random-dino.component';
 import { AlertService, AuthenticationService, UserService, DistrictService, 
   SubDistrictService, VillageService } from './_services/index';
-import {CountryListComponent} from './country-form/index';
+// import {CountryListComponent} from './country-form/index';
 
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
@@ -27,14 +27,15 @@ import { BaseRequestOptions } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
+    AlertComponent,
     NavbarComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    BasicComponent,
-    DinoListComponent,
-    RandomDinoComponent,
-    CountryListComponent
+    // BasicComponent,
+    // DinoListComponent,
+    // RandomDinoComponent,
+    // CountryListComponent
   ],
   imports: [
     BrowserModule,

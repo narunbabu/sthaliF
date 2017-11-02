@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { DinoListComponent } from './dino-list/dino-list.component';
-import { BasicComponent } from './basic/basic.component';
+// import { DinoListComponent } from './dino-list/dino-list.component';
+// import { BasicComponent } from './basic/basic.component';
 
-import { RandomDinoComponent } from './random-dino/random-dino.component';
+// import { RandomDinoComponent } from './random-dino/random-dino.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AlertComponent } from './_directives/index';
@@ -12,13 +12,13 @@ import { AlertService, AuthenticationService, UserService } from './_services/in
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 
-import {CountryListComponent} from './country-form/index';
+// import {CountryListComponent} from './country-form/index';
 const routes: Routes = [
-  {
-    path: 'home',
-    component: DinoListComponent,
-    children: []
-  },
+  // {
+  //   path: 'home',
+  //   component: DinoListComponent,
+  //   children: []
+  // },
   {
     path: 'login',
     component: LoginComponent,
@@ -29,21 +29,21 @@ const routes: Routes = [
     component: RegisterComponent,
     children: []
   },
-  {
-    path: 'country',
-    component: CountryListComponent,
-    children: []
-  },
-  {
-    path: 'basic',
-    component: BasicComponent,
-    children: []
-  },
-  {
-    path: 'random',
-    component: RandomDinoComponent,
-    children: []
-  },
+  // {
+  //   path: 'country',
+  //   component: CountryListComponent,
+  //   children: []
+  // },
+  // {
+  //   path: 'basic',
+  //   component: BasicComponent,
+  //   children: []
+  // },
+  // {
+  //   path: 'random',
+  //   component: RandomDinoComponent,
+  //   children: []
+  // },
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
 ];
 

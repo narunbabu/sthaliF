@@ -17,7 +17,7 @@ export class DistrictService {
     //     return this.http.get(this.config.apiUrl + '/districts'+'?token='+mytoken).map((response: Response) =>
     //    response.json());
 
-       return this.http.get(this.config.apiUrl + '/districts'+'?').map((response: Response) =>
+       return this.http.get(this.config.apiUrl + '/districts').map((response: Response) =>
        response.json());
     }
 
