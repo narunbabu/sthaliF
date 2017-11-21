@@ -1,0 +1,27 @@
+<div  class=" col-md-6 col-sm-12 " >
+  <hr>
+  <!-- 
+    <div *ngIf="myvilItems.vil_code>0" >  </div>-->
+  <h2><small>Sthali: </small> {{vil[0].vil_name}}</h2>    
+  <h2><small>Code: </small> {{vil[0].vil_code}}</h2>         
+  <h3>{{myvilItems.mandal}}<small> (Mandal)</small>, {{myvilItems.district}}<small> (District)</small> </h3>
+  <h3><small>State:</small> {{myvilItems.state_name}}
+    <span *ngIf="vil[0].pin_code>0">, <small> Pin:</small> {{vil[0].pin_code}}</span></h3>
+  <div *ngIf="vil[0].tot_geograph_area>0" >
+  <h3><small>It spans accross </small> {{vil[0].tot_geograph_area}} <small>Hectares </small> </h3>
+</div>
+  <div *ngIf="vil[0].tot_households>0" >
+    <h3> <small> and  houses around:</small> {{vil[0].tot_households}} <small> Families</small></h3>
+</div>
+<hr>
+  <h2 class="colorclass"><small>If you want to see more details about this</small> STHALI <small> please </small>Register or Login.</h2>
+  <h3><small>In order to do registration, first you need to select your</small> Birth place (Janma Sthali) <small> and </small>rgister</h3>
+
+  
+</div>
+<hr>
+<register [myvil]='vil' ></register>
+
+
+
+

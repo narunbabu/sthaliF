@@ -1,0 +1,49 @@
+<div class="col-md-6 col-sm-12 form-group">
+  <h1>Sumitted?: {{submitted}}</h1>
+  <div  *ngIf='!submitted'> <!-- -->
+    <div>
+      <label>State:</label> 
+      <select class ="form-control" [(ngModel)]="selectedState.state_code" (change)="onSelectSt($event.target.value)">
+        <option value="0">--Select--</option>
+        <option *ngFor="let state of states" value= {{state.state_code}}>{{state.state_name}}</option>
+      </select>
+    </div>
+    <div>
+      <label>District:</label> 
+      <select class ="form-control" [(ngModel)]="selectedDistrict.dist_code" (change)="onSelect($event.target.value)" data-width="fit">
+        <option value="0">--Select--</option>
+        <option *ngFor="let district of districts" value= {{district.dist_code}}>{{district.dist_name}}</option>
+      </select>
+</div> <div>
+      <label>SubDistrict:</label>
+      
+        <select class ="form-control" [(ngModel)]="selectedSubDistrict.sub_dist_code" (change)="onSelect_sd($event.target.value)" data-width="fit">
+          <option value="0">--Select--</option>
+        <option *ngFor="let subdist of subdists" value= {{subdist.sub_dist_code}}>{{subdist.sub_dist_name}}</option>
+      </select>
+</div> <div>
+      <label>Village:</label>
+     
+      <select class ="form-control" [(ngModel)]="selitems.vil_code" data-width="fit"> <!--  (change)="onsubmit($event.target.value)" -->
+        <option value="0">--Select--</option>
+     <!--   -->  <option *ngFor="let village of vils" value= {{village.vil_code}}>{{village.vil_name}}</option>
+    </select>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+
+  </div>
+
+
+</div>
+
+<div  class=" col-md-offset-1" > 
+    <!-- *ngIf='submitted' -->
+
+  <app-village [seli2tems]='selitems'>
+
+</app-village>
+
+
+   
+</div>

@@ -1,0 +1,111 @@
+﻿
+  <nav class="navbar navbar-inverse navbar-toggleable-md">
+      <a class="navbar-brand flex-item" href="#">Sthali</a>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div> 
+    
+      <div  id="navbarNav"  class="collapse navbar-collapse ">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li class="nav-item active">
+            <a class="nav-link text-primary" routerLink="/home/search">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/home/register">Register</a>
+          </li>
+          <li class="nav-item"> 
+              <a class="nav-link text-primary" routerLink="/home/login">Login</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-primary"  [routerLink]="['/home/search']">Search</a>
+              
+            </li>
+
+        </ul>
+      </div>
+    </nav>
+  <div class="container">
+      
+
+      <div class="row hero-content pt-lg-6 pb-lg-6 pt-5">
+          <div class="col-md-6 col-sm-12">
+              <h1 class="text-uppercase text-center text-md-left">Welcome to the land of great humans!!</h1>
+              <h4 class="text-uppercase text-center text-md-left">this is your area to do, plan and give back something to your sthali...!!!</h4>
+
+            </div>
+            <h1>This submitted in hc: {{submitted}}</h1>
+
+              <app-villagesearch [(submitted)]='submitted' ></app-villagesearch> 
+              
+<router-outlet></router-outlet>
+          <div class="col-md-6 col-sm-12 text-center">
+              <img src="/assets/overlay.png" class="hero-img mt-5 mt-md-0">
+          </div>
+      </div> 
+
+     
+    
+
+  </div>
+
+
+<div class="feature-wrapper bg-primary pt-5 pb-5 mt-5 mt-lg-0">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12 col-md-1 text-center mb-3 mb-md-0">
+              <i class="fa fa-gamepad fa-2x"></i>
+          </div>
+          <div class="col-sm-12 col-md-3 text-center text-uppercase text-md-left mb-3 mb-md-0">
+              <p>Play in an immersive environment with your friends.</p>
+          </div>
+          <div class="col-sm-12 col-md-1 text-center mb-3 mb-md-0">
+              <i class="fa fa-sitemap fa-2x"></i>
+          </div>
+          <div class="col-sm-12 col-md-3 text-center text-uppercase text-md-left mb-3 mb-md-0">
+              <p>Play offline or online with our state of the art net system.</p>
+          </div>
+          <div class="col-sm-12 col-md-1 text-center mb-3 mb-md-0">
+              <i class="fa fa-line-chart fa-2x"></i>
+          </div>
+          <div class="col-sm-12 col-md-3 text-center text-uppercase text-md-left mb-3 mb-md-0">
+              <p>Web-based player tracking system for keeping tally of your stats.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <div id="join-container" class="pt-lg-6 pb-lg-6 pt-5">
+  <div class="container text-center">
+      <h2 class="text-uppercase">Give us your email!</h2>
+      <h4 class="text-uppercase">We'll give you awesome stuff like beta invites and discounts.</h4>
+
+      <form>
+          <div class="form-group row pt-lg-5 pb-lg-5 pt-5">
+              <div class="col-sm-12 col-md-6 offset-md-2">
+                  <input type="email" class="form-control mb-6" id="exampleInput" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                  <button type="submit" class="btn btn-primary btn-block text-uppercase bg-primary">Okay!</button>
+              </div>
+          </div>
+      </form>
+  </div> 
+  <div  class="container text-center">
+      
+      
+  </div>
+</div> -->
+
+
+
+
+<div class="container">
+  
+  
+</div>
