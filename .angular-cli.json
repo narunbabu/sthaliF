@@ -1,11 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-<<<<<<< HEAD
-    "name": "ang1"
-=======
     "name": "dino-explorer"
->>>>>>> fffc3ea8608214c3eb5a6e880a1f461ac11350ba
   },
   "apps": [
     {
@@ -27,17 +23,11 @@
         "styles.css"
         ,        "./css/style.css"
       ],
-<<<<<<< HEAD
-      "scripts": [ "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/tether/dist/js/tether.min.js",        
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"],
-=======
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/tether/dist/js/tether.min.js",        
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
       ],
->>>>>>> fffc3ea8608214c3eb5a6e880a1f461ac11350ba
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -52,18 +42,6 @@
   },
   "lint": [
     {
-<<<<<<< HEAD
-      "project": "src/tsconfig.app.json",
-      "exclude": "**/node_modules/**"
-    },
-    {
-      "project": "src/tsconfig.spec.json",
-      "exclude": "**/node_modules/**"
-    },
-    {
-      "project": "e2e/tsconfig.e2e.json",
-      "exclude": "**/node_modules/**"
-=======
       "project": "src/tsconfig.app.json"
     },
     {
@@ -71,7 +49,6 @@
     },
     {
       "project": "e2e/tsconfig.e2e.json"
->>>>>>> fffc3ea8608214c3eb5a6e880a1f461ac11350ba
     }
   ],
   "test": {
