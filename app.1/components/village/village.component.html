@@ -1,0 +1,35 @@
+<div  class=" col-md-6 col-sm-12 " >
+  <hr>
+  <!-- 
+    <div *ngIf="myvilItems.vil_code>0" >  </div>-->
+  <h2><small>Sthali: </small> {{vil[0].vil_name}}</h2>    
+  <!-- <h2><small>Code: </small> {{vil[0].vil_code}}</h2>          -->
+  <h3><small>Mandal: </small>{{myvilItems.mandal}}, <small> District: </small> {{myvilItems.district}} </h3>
+  <h3><small>State:</small> {{myvilItems.state_name}}
+    <span *ngIf="vil[0].pin_code>0">, <small> Pin:</small> {{vil[0].pin_code}}</span></h3>
+    <div *ngIf="vil[0].vil_name.length+2<vil[0].gram_pan_name.length" >
+        <h5><small>This village is part of </small>{{vil[0].gram_pan_name}}<small> gram panchayat</small></h5>
+    </div>
+  <div *ngIf="vil[0].tot_geograph_area>0" >
+      
+    <h3><small>This gram panchayat spans accross </small> {{vil[0].tot_geograph_area}} <small>Hectares </small> </h3>
+  </div>
+  <div *ngIf="vil[0].tot_households>0" >
+    
+      <h3> <small> and  houses around:</small> {{vil[0].tot_households}} <small> Families</small></h3>
+      <hr>
+      <h2><small>If you want to see more details about any</small> STHALI <small> please </small>
+        <a [routerLink]="['/home/register']"    >Register</a> <small>or</small>  <a [routerLink]="['/home/login']" >Login</a>
+      </h2>
+      <hr>
+  </div>
+
+  
+</div>
+
+
+<register [myvil]='vil' ></register>
+
+
+
+

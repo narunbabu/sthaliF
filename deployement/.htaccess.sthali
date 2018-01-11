@@ -1,0 +1,12 @@
+RewriteEngine On
+DirectoryIndex index.html index.htm default.htm index.php index.php3 index.phtml index.php5 index.shtml mwindex.phtml
+# Don't rewrite files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# If the ALPHA_USER cookie is set, serve the uncompressed files
+RewriteCond %{HTTP_COOKIE} ALPHA_USER [NC]
+RewriteRule ^ index.html [L]
+
+# Rewrite everything
+RewriteRule ^ dist/index.html [L]
