@@ -8,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlertComponent } from './_directives/index';
 import { AuthGuard } from './_guards/index';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
-import { HomeComponent,VillageSearchComponent,VillageComponent, 
+import { VillageSearchComponent,VillageComponent, 
   UserComponent,UserHomeComponent, UserProfileComponent,SearchComponent } from './components/index';
 
 import { LoginComponent } from './login/index';
@@ -46,19 +46,10 @@ const routes: Routes = [
   ]
  },
   {
-    path: 'user',
+    path: 'home',
     component: UserComponent,
     children: [
-      {
-        path: 'user-profile',
-        component: UserProfileComponent,
-        children: []
-      },
-      {
-        path: 'user-home',
-        component: UserHomeComponent,
-        children: []
-      },
+      
     ]
   },
   // { path: 'home',   redirectTo: 'home/search', pathMatch: 'full' },

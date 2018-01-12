@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { AppConfig } from './app.config';
 
 
-import { HomeComponent,NavbarComponent,VillageSearchComponent,VillageComponent, 
+import { NavbarComponent,VillageSearchComponent,VillageComponent, 
   UserComponent,UserHomeComponent, UserProfileComponent,SearchComponent } from './components/index';
 
 
@@ -38,7 +38,7 @@ import { BaseRequestOptions } from '@angular/http';
     AppComponent,
     AlertComponent,
     NavbarComponent,
-    HomeComponent,
+    //HomeComponent,
     LoginComponent,
     RegisterComponent,
     VillageComponent,
